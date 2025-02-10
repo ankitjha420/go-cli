@@ -75,3 +75,18 @@ func (list *List) Get(filename string) error {
 
 	return json.Unmarshal(file, list)
 }
+
+func(list *List) String() string {
+	formatted := ""
+
+	for k, t := range *list {
+		prefix := "  "
+		if t.Done {
+			prefix = "X  "
+		}
+
+		formatted += fmt.Sprintf("%s%d:%s\n", prefix, k+1, t.Task)
+	}
+
+	return formatted
+}

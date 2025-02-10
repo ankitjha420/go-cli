@@ -11,7 +11,11 @@ const todoFileName = ".todo.json"
 
 func main() {
 	// available CLI args
-	task := flag.String("task", "", "Task to be included in the Todo list")
+	task := flag.String(
+		"task",
+		"",
+		"Task to be included in the Todo list",
+	)
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
 	flag.Parse()
@@ -27,7 +31,7 @@ func main() {
 	case *list:
 		for _, item := range *l {
 			if !item.Done {
-				fmt.Println(item.Task)
+				fmt.Print(list)
 			}
 		}
 
