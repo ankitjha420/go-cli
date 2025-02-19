@@ -1,0 +1,7 @@
+goos: linux
+goarch: amd64
+pkg: github.com/ankitjha420/colstat
+cpu: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz
+BenchmarkRun-4   	      10	 856840626 ns/op	214889121 B/op	 2527060 allocs/op
+PASS
+ok  	github.com/ankitjha420/colstat	9.491s
